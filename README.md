@@ -1,4 +1,4 @@
-### Poincare Embedding
+## Poincare Embedding
 EE299 Individual Study: Poincare Embedding for Learning Hierarchical Representation
 
 ### Packages
@@ -10,11 +10,9 @@ EE299 Individual Study: Poincare Embedding for Learning Hierarchical Representat
 - nltk
 - gensim
 
-#### Usage
-- Data: `wordnet/mammal_closure.tsv`
-
-- Train embedding
-
+### Usage
+#### Data: `wordnet/mammal_closure.tsv`
+#### Train embedding
 ```
 # use poincare distance
 python experiment.py --dim [embedding dimension] --poincare
@@ -23,14 +21,12 @@ python experiment.py --dim [embedding dimension] --poincare
 python experiment.py --dim [embedding dimension] --euclidean
 ```
 
-- Evaluate embedding
-
+#### Evaluate embedding
 ```
 python experiment.py --dim [embedding dimension] --evaluate
 ```
 
-- Plot poincare embedding
-
+#### Plot poincare embedding
 ```
 python experiment.py --dim [embedding dimension] --plot
 ```
