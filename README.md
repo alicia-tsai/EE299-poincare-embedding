@@ -1,5 +1,5 @@
 ## Poincare Embedding
-Investigate the paper: [Poincare Embedding for Learning Hierarchical Representation] (https://arxiv.org/pdf/1705.08039.pdf)
+Investigate the paper: [Poincare Embedding for Learning Hierarchical Representation](https://arxiv.org/pdf/1705.08039.pdf)
 
 ### Packages
 - numpy
