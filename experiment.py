@@ -265,14 +265,15 @@ if __name__ == '__main__':
         train_embedding(embeddingDim, inputFile, outFileEuclidean, 'euclidean')
 
     # Evaluate embedding using gensim implementation
-    mammal_relations = get_relations_from_file(inputFile)
-    print('Evaluating poincare embedding')
-    poincare_results = EvaluateEmbedding(mammal_relations, outFilePoincare).evaluate()
-    print(poincare_results)
+    if args.evaluate:
+        mammal_relations = get_relations_from_file(inputFile)
+        print('Evaluating poincare embedding')
+        poincare_results = EvaluateEmbedding(mammal_relations, outFilePoincare).evaluate()
+        print(poincare_results)
 
-    print('Evaluating euclidean embedding')
-    euclidean_results = EvaluateEmbedding(mammal_relations, outFileEuclidean).evaluate()
-    print(euclidean_results)
+        print('Evaluating euclidean embedding')
+        euclidean_results = EvaluateEmbedding(mammal_relations, outFileEuclidean).evaluate()
+        print(euclidean_results)
 
     # Plot poincare embedding
     if args.plot:
