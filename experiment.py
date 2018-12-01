@@ -53,14 +53,18 @@ def plot_distance_ratio():
     ax = sns.lineplot(x_norm, poincare_ratios, label='Poincare Distance Ratio')
     ax.set_xlabel('X Norm')
     ax.set_ylabel('Distance Ratio')
+    ax.save_figure('distance_ratio.png')
 
+
+# Plot paris of two points in euclidean space
+def plot_pairs():
     x = [i for i in np.linspace(1e-3, 0.7, 8)]
     y = [-i for i in np.linspace(1e-3, 0.7, 8)]
 
-    sns.scatterplot(x, x, label='Point A')
-    sns.scatterplot(x, y, label='Point B')
-    sns.scatterplot([0], [0], color='black', label='Origin')
-    ax.save_figure('distance_ratio.png')
+    ax = sns.scatterplot(x, x, label='Point A')
+    ax = sns.scatterplot(x, y, label='Point B')
+    ax = sns.scatterplot([0], [0], color='black', label='Origin')
+    ax.save_figure('two_points.png')
 
 
 # ========================================
