@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
 import numpy as np
 import argparse
 import torch
@@ -252,9 +253,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     embeddingDim = args.dim
-    inputFile = 'wordnet/mammal_closure.tsv'
-    outFilePoincare = 'mammal-poincare-' + str(embeddingDim) + '.pth'
-    outFileEuclidean = 'mammal-euclidean-' + str(embeddingDim) + '.pth'
+    inputFile = os.path.join('wordnet', 'mammal_closure.tsv')
+    outFilePoincare = os.path.join('saved_model', 'mammal-poincare-' + str(embeddingDim) + '.pth')
+    outFileEuclidean = os.path.join('saved_model', 'mammal-euclidean-' + str(embeddingDim) + '.pth')
 
     # train poincare embedding
     if args.poincare:
